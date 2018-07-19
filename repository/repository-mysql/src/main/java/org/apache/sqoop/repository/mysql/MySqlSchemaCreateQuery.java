@@ -24,7 +24,7 @@ import org.apache.sqoop.repository.common.CommonRepositorySchemaConstants;
 
 public class MySqlSchemaCreateQuery {
 
-  public static final String QUERY_CREATE_DATABASE_SQOOP = "CREATE DATABASE IF NOT EXISTS" + CommonRepoUtils.escapeDatabaseName(SCHEMA_SQOOP);
+  public static final String QUERY_CREATE_DATABASE_SQOOP = "CREATE DATABASE IF NOT EXISTS " + CommonRepoUtils.escapeDatabaseName(SCHEMA_SQOOP);
 
   public static final String QUERY_CREATE_TABLE_SQ_SYSTEM =
       "CREATE TABLE " + CommonRepoUtils.getTableName(SCHEMA_SQOOP, CommonRepositorySchemaConstants.TABLE_SQ_SYSTEM_NAME) + " ("
@@ -136,9 +136,9 @@ public class MySqlSchemaCreateQuery {
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQ_LNK_ID) + " BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQ_LNK_CONFIGURABLE) + " BIGINT, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQ_LNK_NAME) + " VARCHAR(32) NOT NULL, "
-          + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQ_LNK_CREATION_DATE) + " TIMESTAMP, "
+          + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQ_LNK_CREATION_DATE) + " DATETIME, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQ_LNK_CREATION_USER) + " VARCHAR(32) DEFAULT NULL, "
-          + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQ_LNK_UPDATE_DATE) + " TIMESTAMP, "
+          + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQ_LNK_UPDATE_DATE) + " DATETIME, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQ_LNK_UPDATE_USER) + " VARCHAR(32) DEFAULT NULL, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQ_LNK_ENABLED) + " BOOLEAN DEFAULT TRUE, "
           + "CONSTRAINT " + CommonRepoUtils.escapeConstraintName(CommonRepositorySchemaConstants.CONSTRAINT_SQ_LNK_NAME_UNIQUE_NAME)
@@ -155,9 +155,9 @@ public class MySqlSchemaCreateQuery {
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQB_FROM_LINK) + " BIGINT, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQB_TO_LINK) + " BIGINT, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQB_NAME) + " VARCHAR(64) NOT NULL, "
-          + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQB_CREATION_DATE) + " TIMESTAMP, "
+          + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQB_CREATION_DATE) + " DATETIME, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQB_CREATION_USER) + " VARCHAR(32) DEFAULT NULL, "
-          + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQB_UPDATE_DATE) + " TIMESTAMP, "
+          + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQB_UPDATE_DATE) + " DATETIME, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQB_UPDATE_USER) + " VARCHAR(32) DEFAULT NULL, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQB_ENABLED) + " BOOLEAN DEFAULT TRUE, "
           + "CONSTRAINT " + CommonRepoUtils.escapeConstraintName(CommonRepositorySchemaConstants.CONSTRAINT_SQB_NAME_UNIQUE_NAME)
@@ -217,9 +217,9 @@ public class MySqlSchemaCreateQuery {
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQS_ID) + " BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQS_JOB) + " BIGINT, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQS_STATUS) + " VARCHAR(20), "
-          + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQS_CREATION_DATE) + " TIMESTAMP, "
+          + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQS_CREATION_DATE) + " DATETIME, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQS_CREATION_USER) + " VARCHAR(32) DEFAULT NULL, "
-          + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQS_UPDATE_DATE) + " TIMESTAMP, "
+          + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQS_UPDATE_DATE) + " DATETIME, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQS_UPDATE_USER) + " VARCHAR(32) DEFAULT NULL, "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQS_EXTERNAL_ID) + " VARCHAR(50), "
           + CommonRepoUtils.escapeColumnName(CommonRepositorySchemaConstants.COLUMN_SQS_EXTERNAL_LINK) + " VARCHAR(150), "

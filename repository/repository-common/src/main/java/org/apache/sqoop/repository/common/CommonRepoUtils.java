@@ -25,7 +25,7 @@ import org.apache.log4j.Logger;
 public class CommonRepoUtils {
   public static final Logger LOG = Logger.getLogger(CommonRepoUtils.class);
 
-  public static final String QUOTE_CHARACTER = "\"";
+  public static final String QUOTE_CHARACTER = "`";
 
   public static final String SINGLE_QUOTO_CHARACTER = "\'";
 
